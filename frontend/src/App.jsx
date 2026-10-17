@@ -1,6 +1,5 @@
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
 import CitizenPortal from './pages/CitizenPortal';
-import AdminDashboard from './pages/staffDashboard';
 import Analytics from './pages/Analytics';
 import './App.css';
 
