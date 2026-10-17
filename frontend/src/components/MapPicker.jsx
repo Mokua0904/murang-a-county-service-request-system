@@ -34,7 +34,7 @@ const MapPicker = ({ onLocationSelect, initialPosition }) => {
 
     return (
         <div style={{ height: '300px', width: '100%', borderRadius: '0.5rem', overflow: 'hidden' }}>
-            <MapContainer center={[31.9038, 35.2050]} zoom={13} style={{ height: '100%', width: '100%' }}>
+            <MapContainer center={[-0.7210, 37.1525]} zoom={13} style={{ height: '100%', width: '100%' }}>
                 <TileLayer
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                     attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'

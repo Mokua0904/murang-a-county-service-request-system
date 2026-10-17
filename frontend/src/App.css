@@ -799,3 +799,21 @@ tr:hover td {
   font-size: 3rem;
   margin-bottom: 1rem;
 }
+/* Murang'a County Theme */
+nav.navbar, .navbar {
+    background-color: #000000 !important; /* Forces black background */
+    border-bottom: 4px solid #008751 !important; /* Forces green stripe */
+    padding: 15px 20px;
+}
+
+/* Make the text white/gold */
+.logo, .navbar-brand {
+    color: #FFFFFF !important;
+    font-weight: bold;
+}
+
+.nav-link {
+    color: #C49A30 !important; /* Gold text */
+    font-weight: bold;
+    margin-left: 15px;
+}

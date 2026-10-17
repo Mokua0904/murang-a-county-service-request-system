@@ -8,7 +8,7 @@ function StaffDashboard() {
         <div>
             <div className="page-header">
                 <div className="container">
-                    <h1 className="page-title">Municipal Staff Console</h1>
+                    <h1 className="page-title">Admin Dashboard</h1>
                     <p className="text-muted">Manage, triage, and assign service requests</p>
                 </div>
             </div>
@@ -437,14 +437,14 @@ function RequestDetail() {
                         <div className="timeline">
                             {(() => {
                                 const STATUS_ORDER = {
-                                    'new': 0, 'triaged': 1, 'assigned': 2, 'in_progress': 3, 'resolved': 4, 'closed': 5
+                                    'pending': 0, 'triaged': 1, 'assigned': 2, 'in_progress': 3, 'resolved': 4, 'closed': 5
                                 };
                                 const currentStep = STATUS_ORDER[request.status] || 0;
 
                                 return ['created_at', 'triaged_at', 'assigned_at', 'work_started_at', 'resolved_at', 'closed_at'].map((key) => {
                                     // Custom label mapping
                                     const labels = {
-                                        'created_at': 'New',
+                                        'created_at': 'pending',
                                         'triaged_at': 'Triaged',
                                         'assigned_at': 'Assigned',
                                         'work_started_at': 'In Progress',
@@ -454,7 +454,7 @@ function RequestDetail() {
 
                                     // Map timestamp key to status key for order check
                                     const statusKeyMap = {
-                                        'created_at': 'new',
+                                        'created_at': 'pending',
                                         'triaged_at': 'triaged',
                                         'assigned_at': 'assigned',
                                         'work_started_at': 'in_progress',

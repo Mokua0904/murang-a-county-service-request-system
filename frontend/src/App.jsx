@@ -1,7 +1,6 @@
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
 import CitizenPortal from './pages/CitizenPortal';
-import StaffDashboard from './pages/StaffDashboard';
-import AgentInterface from './pages/AgentInterface';
+import AdminDashboard from './pages/staffDashboard';
 import Analytics from './pages/Analytics';
 import './App.css';
 
@@ -12,11 +11,14 @@ function Navbar() {
   return (
     <nav className="navbar">
       <div className="container navbar-content">
-        <Link to="/" className="logo">🛡️ CST</Link>
+        <Link to="/" className="logo" style={{ display: 'flex', alignItems: 'center', gap: '10px', textDecoration: 'none' }}>
+    <img src="/muranga-logo.png" alt="" style={{ height: '35px' }} />
+    <span>Murang'a County</span>
+</Link>
+       
         <div className="nav-links">
           <Link to="/citizen" className={`nav-link ${isActive('/citizen') ? 'active' : ''}`}>Citizen Portal</Link>
-          <Link to="/staff" className={`nav-link ${isActive('/staff') ? 'active' : ''}`}>Staff Console</Link>
-          <Link to="/agent" className={`nav-link ${isActive('/agent') ? 'active' : ''}`}>Agent Tasks</Link>
+          <Link to="/staff" className={`nav-link ${isActive('/staff') ? 'active' : ''}`}>Admin Dashboard</Link>
           <Link to="/analytics" className={`nav-link ${isActive('/analytics') ? 'active' : ''}`}>Analytics</Link>
         </div>
       </div>
@@ -28,11 +30,11 @@ function Home() {
   return (
     <div className="home-page">
       <div className="hero">
-        <h1>Citizen Services Tracker</h1>
-        <p>Advanced Municipal Service Tracking System with Real-time Geo-feeds</p>
+        <h1>Murang'a county public service request system</h1>
+        <p>Report broken streetlights, water issues or garbage problems directly to murang'a county government. Track your request from submission to resolution</p>
         <div className="hero-actions">
-          <Link to="/citizen" className="btn btn-primary btn-lg">Report an Issue</Link>
-          <Link to="/staff" className="btn btn-outline btn-lg">Staff Login</Link>
+          <Link to="/citizen" className="btn btn-primary btn-lg">Submit a Request</Link>
+          <Link to="/staff" className="btn btn-outline btn-lg">Admin Login</Link>
         </div>
       </div>
 
@@ -40,23 +42,23 @@ function Home() {
         <div className="feature-grid">
           <div className="feature-card">
             <div className="feature-icon">📍</div>
-            <h3>Geo-Enabled Reporting</h3>
-            <p>Report issues with precise location on interactive maps</p>
+            <h3>Report County Issues</h3>
+            <p>Quickly report issues like water shortages, broken streetlights, or uncollected garbage in your ward,with optional photo evidence</p>
           </div>
           <div className="feature-card">
             <div className="feature-icon">⚡</div>
-            <h3>Real-time Tracking</h3>
-            <p>Track your requests from submission to resolution</p>
+            <h3>track your request</h3>
+            <p>stay updated track the progress of your request as it moves from pending to it progress and finally resolved.</p>
           </div>
           <div className="feature-card">
             <div className="feature-icon">📊</div>
-            <h3>Analytics Dashboard</h3>
-            <p>View live heatmaps and performance metrics</p>
+            <h3>county analytics</h3>
+            <p>Transparency for murang'a residents. view stastics on open vs resolved cases across the county.</p>
           </div>
           <div className="feature-card">
             <div className="feature-icon">⏱️</div>
-            <h3>SLA Monitoring</h3>
-            <p>Automated escalation and breach prevention</p>
+            <h3>secure Access</h3>
+            <p>Registered citizen portal and dedicated dashboard for murang'a county administration.</p>
           </div>
         </div>
       </div>
@@ -73,8 +75,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/citizen/*" element={<CitizenPortal />} />
-            <Route path="/staff/*" element={<StaffDashboard />} />
-            <Route path="/agent/*" element={<AgentInterface />} />
+            <Route path="/staff/*" element={<AdminDashboard />} />
             <Route path="/analytics" element={<Analytics />} />
           </Routes>
         </main>

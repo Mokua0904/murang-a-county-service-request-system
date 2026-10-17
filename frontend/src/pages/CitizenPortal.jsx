@@ -101,7 +101,7 @@ function PortalHome() {
                 <div className="card mb-4" style={{ background: 'linear-gradient(135deg, #2563eb 0%, #1e40af 100%)', color: 'white' }}>
                     <div className="flex justify-between items-center">
                         <div>
-                            <h3>Welcome to CST Citizen Portal</h3>
+                            <h3>Welcome to Murang'a county citizen porrtal</h3>
                             <p style={{ opacity: 0.9 }}>Login or register to report issues and track your requests</p>
                         </div>
                         <div className="flex gap-2">
