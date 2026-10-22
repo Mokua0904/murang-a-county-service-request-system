@@ -10,30 +10,10 @@ A mini eCitizen-style web application designed for Murang'a County residents to 
 
 This platform bridges the gap between citizens and county administration by providing a transparent, modern portal for civic reporting and a powerful administrative dashboard for county staff.
 
-## 📖 Table of Contents
-- [Demo](#-demo)
-- [Features](#-features)
-- [Architecture & Tech Stack](#-architecture--tech-stack)
-- [Prerequisites](#-prerequisites)
-- [Local Setup](#-local-setup)
-  - [1. Database Setup](#1-database-setup)
-  - [2. Backend Setup](#2-backend-setup)
-  - [3. Frontend Setup](#3-frontend-setup)
-- [Configuration](#️-configuration)
-- [Usage](#-usage)
-- [Project Structure](#-project-structure)
-- [License](#-license)
 
----
 
-## 🎥 Demo
 
-> **Live Demo:** *(Coming soon / Add your deployment link here)*
-> 
-> **Screenshots:** 
-> *(Add 1-2 screenshots of your Citizen Portal and Admin Dashboard here to prove the UI works)*
 
----
 
 ## ✨ Features
 
@@ -151,7 +131,3 @@ Open a **new** terminal and navigate to the frontend directory:
     └── README.md               # Project documentation
 
 ---
-
-## 📄 License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
